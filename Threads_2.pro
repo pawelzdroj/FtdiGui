@@ -22,8 +22,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-LIBS += -L"$$PWD\libs\ftdi\i386" -lftd2xx -luser32
-INCLUDEPATH += ./libs/ftdi/i386
+#LIBS += -L"$$PWD\libs\ftdi\i386" -lftd2xx -luser32
+#INCLUDEPATH += ./libs/ftdi/i386
 
 SOURCES += \
         main.cpp \
@@ -41,3 +41,7 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+LIBS += -L$$PWD/libs/ftdi/i386/ -lftd2xx -luser32
+INCLUDEPATH += $$PWD/libs/ftdi/i386
+DEPENDPATH += $$PWD/libs/ftdi/i386
